@@ -1,3 +1,10 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+
+  let mut args = env::args();
+  args.next().unwrap();
+  let params: Vec<String> = args.collect();
+  println!("=> {:?}", params);
+
 }
